@@ -37,7 +37,7 @@
 		{% endif %}
 
 		<div style="text-align: center;">
-			<img src="{{ avatar.image.url }}" id="cropimage" />
+			<img src="{{MEDIA_URL}}{{ avatar.image.url }}" id="cropimage" />
 		</div>
 		<input type="hidden" name="top" value="0"/>
 		<input type="hidden" name="bottom" value="0"/>
