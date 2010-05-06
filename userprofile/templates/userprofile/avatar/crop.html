@@ -4,8 +4,12 @@
 {% block title %}{% trans "Crop &amp; resize the area you want" %}{% endblock %}
 {% block robots %}noindex,nofollow{% endblock %}
 
+{% block extracss %}
+<link href="/static/css/imgareaselect-default.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
 {% block extrajs %}
-<script type="text/javascript" src="{{ MEDIA_URL }}userprofile/js/jquery.imgareaselect-0.4.2.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.imgareaselect.min.js"></script>
 <script type="text/javascript">
 	$(function() {
 		function updateValues(img, selection) {

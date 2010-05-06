@@ -82,7 +82,7 @@
 
 	{% load avatars %}
   <div class="center">
-		<img class="border" alt="{{ request.user }}" id="avatarimg" src="{% avatar 96 %}" />
+		<img class="border" alt="{{ request.user }}" id="avatarimg" src="{{ MEDIA_URL }}{% avatar 96 %}" />
     {% if user.get_profile.has_avatar %}<p id="avatardelete" style="text-align: center;"><a href="{{ request.path_info }}delete/" class="delavatar">{% trans "Delete" %}</a></p>{% endif %}
 	</div>
 {% endblock %}
