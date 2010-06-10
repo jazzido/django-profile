@@ -59,7 +59,7 @@ class ResizedThumbnailNode(Node):
             base, filename = os.path.split(avatar_path)
             generic, extension = os.path.splitext(filename)
             filename = os.path.join(base, "%s.%s%s" % (generic, self.size, extension))
-            url = filename.replace(settings.MEDIA_ROOT, settings.MEDIA_URL)
+            url = filename.replace(settings.MEDIA_ROOT, '')
 
         if not os.path.isfile(filename):
             image = Image.open(avatar_path)
